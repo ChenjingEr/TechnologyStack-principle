@@ -1,0 +1,14 @@
+TODO 
+1. redis的多数据库？干嘛用？怎么用？
+   一个server支持16个数据库(以编号命名)，默认选择的是0。通过select index来选择数据库
+2. redis的过期时间合理设置：不会因为存在太久而消耗内存，也不会存在时间太短导致命中率低下  maxmemory(redis.conf)可以设置最大内存，maxmemory-policy 设置删除策略
+删除策略：
+	volatile-lru 删除设置了过期时间的key,lru算法
+	allkeys-lru  lru
+	volatile-random 随机删除一个设置饿了过期时间的key
+	allkeys-random 随机删除一个key
+	noeviction 不删除只是返回错误
+	volatile-ttl 删除过期时间最近的要给key
+3. JAVA 用redis 实现任务队列
+4. 发布/订阅模式 redis的publish /subscreb
+5. 什么是缓存穿透，缓存雪崩
