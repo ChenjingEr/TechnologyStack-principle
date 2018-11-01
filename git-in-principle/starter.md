@@ -41,7 +41,29 @@ config
 8. remote resposity
     1. ssh-keygen -r rsa -C "mail address" --> create ssh key --> .ssh id_rsa,id_rsa.pub
     2. github acount setting setting SSH Keys
-    3. 
+    3. git remote add origin git_address --> 与远程库关联
+    4. git push -u origin master --> push到远程库origin的master分支，u推送+关联
+        --> git push origin master --> 推送到master
+
+    ---
+
+    git clone remote_address
+
+9 git branch
+    1. git checkout -b dev --> 新建一个dev分支且切换
+    2. git branch --> 查看当前分支
+    3. git mearge dev --> 合并dev到当前分支 --> fast-forward方式(master指针移动)
+    4. git branch -d dev --> 删除dev分支
+    
+10. git stash
+    1. git stash --> saved working directory
+    2. git stash list --> 暂存列表
+    3. git stash apply --> 恢复列表 --> 恢复后stash并没有删除 --> git stash drop删除 /
+    4. git stash pop 恢复的同时删除
+    5. 
+
+
+
     
 
 

@@ -6,3 +6,5 @@ change
 create a brach
 master write
 make a confilic
+
+git stash
